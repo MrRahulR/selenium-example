@@ -20,10 +20,14 @@ public class MainTest {
 
     @BeforeMethod
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        ChromeOptions cOptions = new ChromeOptions();
+        cOptions.addArguments("--start-maximized");
+        cOptions.addArguments("--headless");
+        driver = new ChromeDriver(cOptions);
+//        FirefoxOptions fOptions = new FirefoxOptions();
+//        fOptions.addArguments("--start-maximized");
+//        fOptions.addArguments("--headless");
+//        driver = new FirefoxDriver(fOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
